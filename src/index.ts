@@ -1,6 +1,6 @@
 import {
   JupyterFrontEnd,
-  JupyterFrontEndPlugin,
+  JupyterFrontEndPlugin
 } from '@jupyterlab/application';
 
 import { ICommandPalette } from '@jupyterlab/apputils';
@@ -24,9 +24,10 @@ const extension: JupyterFrontEndPlugin<void> = {
         console.log(
           `jlab-examples:main-menu has been called ${args['origin']}.`
         );
-        var bug_report_url = 'https://cybergisxhub.cigi.illinois.edu/problem-report/';
+        const bug_report_url =
+          'https://github.com/cybergis/CyberGIS-Jupyter-For-Water-Bug-Reporting/issues';
         window.open(bug_report_url, '_blank');
-      },
+      }
     });
 
     // Add the command to the command palette
@@ -34,9 +35,9 @@ const extension: JupyterFrontEndPlugin<void> = {
     palette.addItem({
       command,
       category,
-      args: { origin: 'from the palette' },
+      args: { origin: 'from the palette' }
     });
-  },
+  }
 };
 
 export default extension;
