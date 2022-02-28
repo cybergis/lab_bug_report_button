@@ -18,7 +18,7 @@ const extension: JupyterFrontEndPlugin<void> = {
     // Add a command
     const command = 'jlab-examples:main-menu';
     commands.addCommand(command, {
-      label: 'Go to CyberGISX Bug report',
+      label: 'Go to CJW Bug report',
       caption: 'Execute jlab-examples:main-menu Command',
       execute: (args: any) => {
         console.log(
